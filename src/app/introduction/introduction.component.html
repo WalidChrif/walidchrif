@@ -7,15 +7,15 @@
                     <div class="display-t js-fullheight">
                         <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                             <div class="profile-thumb" style="background: url(../assets/images/myPic.jpg);"></div>
-                            <h1><span>Walid Chrif</span></h1>
-                            <h3><span>FullStack Developer</span></h3>
+                            <h1><span>{{walid.fullName}}</span></h1>
+                            <h3><span>{{walid.title}}</span></h3>
                             <!-- <p> -->
                             <br>
-                            <ul class="fh5co-social-icons">
-                                <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                                <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble2"></i></a></li>
+                            <ul class="fh5co-social-icons" >
+                                <li *ngFor="let link of walid.links">
+                                    <a [href]="link.url">
+                                        <i class="icon-{{service.getSiteIcon(link.name)}}"></i>
+                                    </a></li>
                             </ul>
                             <!-- </p> -->
                         </div>

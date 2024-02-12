@@ -10,14 +10,18 @@ import { BlogComponent } from './blog/blog.component';
 import { StartedComponent } from './started/started.component';
 import { ConsultComponent } from './consult/consult.component';
 import { FooterComponent } from './footer/footer.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+
+
+// import { RedirectGuard } from './RedirectGuard';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, IntroductionComponent, AboutComponent, ResumeComponent,
      FeaturesComponent, SkillsComponent, ProjectsComponent, BlogComponent, StartedComponent,
-     ConsultComponent, FooterComponent
-    ],
+     ConsultComponent, FooterComponent, ExperienceComponent, EducationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
