@@ -6,7 +6,20 @@
                     <h3>Education</h3>
                 </div>
             </li>
-            <li [ngClass]="getClass()" class="animate-box">
+            <li [ngClass]="getClass()" class="animate-box"
+             *ngFor="let educ of education">
+                <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h3 class="timeline-title">{{educ.diploma}} in {{educ.major}}</h3>
+                        <span class="company">{{educ.school}} - {{educ.graduationDate}}</span>
+                    </div>
+                    <div class="timeline-body" *ngFor="let task of educ.tasks">
+                        <p>{{task}}</p>
+                    </div>
+                </div>
+            </li>
+            <!-- <li [ngClass]="getClass()" class="animate-box">
                 <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
@@ -18,8 +31,8 @@
                             coast of the Semantics, a large language ocean.</p>
                     </div>
                 </div>
-            </li>
-            <li [ngClass]="getClass()" class="animate-box">
+            </li> -->
+            <!-- <li [ngClass]="getClass()" class="animate-box">
                 <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
@@ -57,7 +70,7 @@
                             Consonantia, there live the blind texts.</p>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>

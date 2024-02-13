@@ -57,7 +57,7 @@ export class DataService {
         school: "FLSH Ben M'sik",
         graduationDate: new Date(11, 7, 2023),
         tasks: [
-          'Cultural Traditions in Transition: ' +
+          'Research Project : Cultural Traditions in Transition; ' +
             'Contrasting the Impact of Heritage on America and Morocco.',
         ],
       },
@@ -120,11 +120,16 @@ export class DataService {
       ? site.toLocaleLowerCase() + '2'
       : site.toLocaleLowerCase() + '3';
   }
-  getKeys() {
-    return Object.keys(this.walid);
-  }
 
-
+  // getClass() : string {   
+  //   if (DataService.myClass === 'timeline-inverted') {
+  //     DataService.myClass = 'timeline-unverted';
+  //     return DataService.myClass;
+  //   } else {
+  //     DataService.myClass = 'timeline-inverted'
+  //     return DataService.myClass;
+  //   }
+  // }
   getClass() : string {   
     if (this.myClass === 'timeline-inverted') {
       this.myClass = 'timeline-unverted';

@@ -1,12 +1,12 @@
 import { Component, Input, inject } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { NgClass } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgFor],
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'
 })

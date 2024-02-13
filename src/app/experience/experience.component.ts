@@ -1,7 +1,6 @@
 import { AfterContentChecked, Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { NgFor, NgIf, NgClass } from '@angular/common';
-import { OutletContext } from '@angular/router';
 
 @Component({
   selector: 'app-experience',
