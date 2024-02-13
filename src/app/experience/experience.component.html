@@ -6,20 +6,25 @@
                     <h3>Work Experience</h3>
                 </div>
             </li>
-            <li class="animate-box timeline-unverted">
+
+            <li id="myLi" [ngClass]="getClass()" class="animate-box " 
+            *ngFor="let exp of experiences; index as index" >
                 <div class="timeline-badge"><i class="icon-suitcase"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h3 class="timeline-title">Senior Developer</h3>
-                        <span class="company">Company Name - 2016 - Current</span>
+                        <h3 class="timeline-title">{{exp.position}}</h3>
+                        <span class="company">
+                            {{exp.company}} - {{exp.startDate}} - {{exp.endDate}}
+                        </span>
                     </div>
                     <div class="timeline-body">
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                            Consonantia, there live the blind texts.</p>
+                        <p *ngFor="let task of exp.tasks">{{task}}</p>
                     </div>
                 </div>
             </li>
-            <li class="timeline-inverted animate-box">
+
+
+            <!-- <li class="timeline-inverted animate-box">
                 <div class="timeline-badge"><i class="icon-suitcase"></i></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
@@ -44,7 +49,7 @@
                             Consonantia, there live the blind texts.</p>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
-    </div>
+</div>
 </div>

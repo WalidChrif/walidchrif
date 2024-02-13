@@ -5,6 +5,9 @@ import { Person } from '../models/person.model';
   providedIn: 'root',
 })
 export class DataService {
+
+  myClass = 'timeline-unverted';
+
   walid: Person = {
     fullName: 'Walid Chrif',
     title: 'FullStack Developer',
@@ -34,7 +37,7 @@ export class DataService {
         endDate: new Date(20, 7, 2023),
         location: 'Casablanca',
         tasks: ['Handle and manage multimedia content.'],
-      },
+      }
     ],
     education: [
       {
@@ -119,5 +122,16 @@ export class DataService {
   }
   getKeys() {
     return Object.keys(this.walid);
+  }
+
+
+  getClass() : string {   
+    if (this.myClass === 'timeline-inverted') {
+      this.myClass = 'timeline-unverted';
+      return this.myClass;
+    } else {
+      this.myClass = 'timeline-inverted'
+      return this.myClass;
+    }
   }
 }
