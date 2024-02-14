@@ -4,6 +4,6 @@ export interface Education {
     major : string;
     school : string;
     tasks? : string[];
-    graduationDate : Date ;
+    graduationDate : string ;
     
 }

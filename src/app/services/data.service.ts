@@ -6,6 +6,7 @@ import { Person } from '../models/person.model';
 })
 export class DataService {
 
+
   myClass = 'timeline-unverted';
 
   walid: Person = {
@@ -33,8 +34,8 @@ export class DataService {
       {
         position: 'Content Moderator',
         company: 'Majorel',
-        startDate: new Date(19, 9, 2022),
-        endDate: new Date(20, 7, 2023),
+        startDate: new Date(2022, 9-1, 19).toDateString().split(' ').slice(1).join(' '),
+        endDate: new Date(2023, 7-1, 21).toDateString().split(' ').slice(1).join(' '),
         location: 'Casablanca',
         tasks: ['Handle and manage multimedia content.'],
       }
@@ -44,7 +45,7 @@ export class DataService {
         diploma: 'Professional Licence',
         major: 'Java/JEE',
         school: 'FST Settat',
-        graduationDate: new Date(11, 7, 2023),
+        graduationDate: new Date(2023,7-1,25).toDateString().split(' ').slice(1).join(' '),
         tasks: [
           'Design and development of a real estate and vacation' +
             'management platform (HTML5, CSS3, Angular Material, Angular,' +
@@ -55,7 +56,7 @@ export class DataService {
         diploma: 'Bachelor Degree',
         major: 'English Studies',
         school: "FLSH Ben M'sik",
-        graduationDate: new Date(11, 7, 2023),
+        graduationDate: 'ongoing',
         tasks: [
           'Research Project : Cultural Traditions in Transition; ' +
             'Contrasting the Impact of Heritage on America and Morocco.',
@@ -65,13 +66,13 @@ export class DataService {
         diploma: 'Specialized Technicien Diploma',
         major: 'IT Development',
         school: "ISTA Sidi Maarouf",
-        graduationDate: new Date(20, 7, 2020),
+        graduationDate: new Date('11 Jul 2020').toDateString().split(' ').slice(1).join(' '),
       },
       {
         diploma: 'Baccalaureate',
         major: 'Experimental Science',
         school: 'Lycee Moulay Driss',
-        graduationDate: new Date(20, 7, 2018),
+        graduationDate: new Date(2018, 6-1, 20).toDateString().substring(new Date(2018, 7-1, 20).toDateString().indexOf(' ')),
       },
     ],
   };
