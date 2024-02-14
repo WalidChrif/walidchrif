@@ -7,19 +7,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center" *ngFor="let serv of services">
                     <div class="feature-left">
                         <span class="icon">
                             <i class="icon-paintbrush"></i>
                         </span>
-                        <div class="feature-copy">
-                            <h3>Web Design</h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                        <div class="feature-copy" >
+                            <h3>{{serv.name}}</h3>
+                            <p>{{serv.details}}</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 text-center">
+                <!-- <div class="col-md-4 text-center">
                     <div class="feature-left">
                         <span class="icon">
                             <i class="icon-briefcase"></i>
@@ -82,7 +82,7 @@
                             <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

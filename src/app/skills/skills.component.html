@@ -6,30 +6,10 @@
             </div>
         </div>
         <div class="row row-pb-md">
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="95"><span><strong>HTML5</strong>95%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="93"><span><strong>CSS3</strong>93%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="90"><span><strong>jQuery</strong>90%</span></div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="89"><span><strong>PHP</strong>89%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="85"><span><strong>MySQL</strong>85%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="90"><span><strong>AngularJS</strong>90%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="85"><span><strong>Ruby</strong>85%</span></div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-                <div class="chart" data-percent="90"><span><strong>Java</strong>90%</span></div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center" *ngFor="let skill of mainSkills">
+                <div class="chart" [attr.data-percent]="skill.percentage">
+                    <span><strong>{{skill.name}}</strong>{{skill.percentage}}%</span>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -42,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="progress-wrap">
+                <!-- <div class="progress-wrap">
                     <h3><span class="name-left">WordPress</span><span class="value-right">90%</span></h3>
                     <div class="progress">
                         <div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
@@ -65,8 +45,8 @@
                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            </div> 
             <div class="col-md-6">
                 <div class="progress-wrap">
                     <h3><span class="name-left">Design</span><span class="value-right">100%</span></h3>
@@ -76,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="progress-wrap">
+                <!-- <div class="progress-wrap">
                     <h3><span class="name-left">Ruby</span><span class="value-right">70%</span></h3>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70"
@@ -99,7 +79,7 @@
                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -5,9 +5,7 @@ import { Person } from '../models/person.model';
   providedIn: 'root',
 })
 export class DataService {
-
-
-  myClass = 'timeline-unverted';
+  myClass = 'timeline-inverted';
 
   walid: Person = {
     fullName: 'Walid Chrif',
@@ -34,18 +32,30 @@ export class DataService {
       {
         position: 'Content Moderator',
         company: 'Majorel',
-        startDate: new Date(2022, 9-1, 19).toDateString().split(' ').slice(1).join(' '),
-        endDate: new Date(2023, 7-1, 21).toDateString().split(' ').slice(1).join(' '),
+        startDate: new Date(2022, 9 - 1, 19)
+          .toDateString()
+          .split(' ')
+          .slice(1)
+          .join(' '),
+        endDate: new Date(2023, 7 - 1, 21)
+          .toDateString()
+          .split(' ')
+          .slice(1)
+          .join(' '),
         location: 'Casablanca',
         tasks: ['Handle and manage multimedia content.'],
-      }
+      },
     ],
     education: [
       {
         diploma: 'Professional Licence',
         major: 'Java/JEE',
         school: 'FST Settat',
-        graduationDate: new Date(2023,7-1,25).toDateString().split(' ').slice(1).join(' '),
+        graduationDate: new Date(2023, 7 - 1, 25)
+          .toDateString()
+          .split(' ')
+          .slice(1)
+          .join(' '),
         tasks: [
           'Design and development of a real estate and vacation' +
             'management platform (HTML5, CSS3, Angular Material, Angular,' +
@@ -65,16 +75,72 @@ export class DataService {
       {
         diploma: 'Specialized Technicien Diploma',
         major: 'IT Development',
-        school: "ISTA Sidi Maarouf",
-        graduationDate: new Date('11 Jul 2020').toDateString().split(' ').slice(1).join(' '),
+        school: 'ISTA Sidi Maarouf',
+        graduationDate: new Date('11 Jul 2020')
+          .toDateString()
+          .split(' ')
+          .slice(1)
+          .join(' '),
       },
       {
         diploma: 'Baccalaureate',
         major: 'Experimental Science',
         school: 'Lycee Moulay Driss',
-        graduationDate: new Date(2018, 6-1, 20).toDateString().substring(new Date(2018, 7-1, 20).toDateString().indexOf(' ')),
+        graduationDate: new Date(2018, 6 - 1, 20)
+          .toDateString()
+          .substring(new Date(2018, 7 - 1, 20).toDateString().indexOf(' ')),
       },
     ],
+    services: [
+      {
+        name: 'Front-end Development',
+        details:
+          'Building user interfaces (UI) using ' +
+          'HTML5, CSS3, SASS, Bootstrap, Tailwind, JavaScript, Angular, TypeScript.',
+      },
+      {
+        name: 'Back-end Development',
+        details:
+          'Creating server-side logic and APIs using Java, ' +
+          'Spring Boot, Spring Core, Spring JPA, Spring AOP, Spring MVC, RESTful Webservices, Spring Security',
+      },
+      {
+        name: 'Database Management',
+        details:
+          'Integrating databases with the back-end to store ' +
+          'and retrieve data efficiently using (MySQL, SQL Server, Hibernate, Oracle).',
+      },
+    ],
+    mainSkills: [
+      { name: 'HTML5', percentage: 95 },
+      { name: 'CSS3', percentage: 85 },
+      { name: 'JavaScript', percentage: 95 },
+      { name: 'Angular', percentage: 95 },
+      // { name: 'Java', percentage: 90 },
+      // { name: 'Spring Core', percentage: 90 },
+      { name: 'Spring Boot', percentage: 95 },
+      { name: 'Spring JPA', percentage: 95 },
+      { name: 'Spring AOP', percentage: 95 },
+      { name: 'Spring Security', percentage: 80 },
+      // { name: 'Spring MVC', percentage: 95 },
+    ],
+    otherSkills: [
+      { name: 'Bootstrap', percentage: 85 },
+      { name: 'Tailwind', percentage: 85 },
+      // { name: 'SASS', percentage: 90 },
+      // { name: 'Angular Material', percentage: 90 },
+      { name: 'TypeScript', percentage: 95 },
+      // { name: 'RESTful Webservices', percentage: 90 },
+      { name: 'MySQL', percentage: 90 },
+      { name: 'SQL Server', percentage: 85 },
+      { name: 'Hibernate', percentage: 90 },
+      { name: 'Oracle', percentage: 80 },
+      { name: 'Git', percentage: 90 },
+      { name: 'Docker', percentage: 70 },
+      // { name: 'Kubernetes', percentage: 90 },
+      // { name: 'Jenkins', percentage: 90 },
+      // { name: 'SonarQube', percentage: 90 },
+    ]
   };
 
   getPerson(): Person {
@@ -122,7 +188,11 @@ export class DataService {
       : site.toLocaleLowerCase() + '3';
   }
 
-  // getClass() : string {   
+  getServices() {
+    return this.walid.services;
+  }
+
+  // getClass() : string {
   //   if (DataService.myClass === 'timeline-inverted') {
   //     DataService.myClass = 'timeline-unverted';
   //     return DataService.myClass;
@@ -131,13 +201,21 @@ export class DataService {
   //     return DataService.myClass;
   //   }
   // }
-  getClass() : string {   
+  getClass(): string {
     if (this.myClass === 'timeline-inverted') {
       this.myClass = 'timeline-unverted';
       return this.myClass;
     } else {
-      this.myClass = 'timeline-inverted'
+      this.myClass = 'timeline-inverted';
       return this.myClass;
     }
+  }
+
+  getMainSkills() {
+    return this.walid.mainSkills;
+  }
+
+  getOtherSkills() {
+    return this.walid.otherSkills;
   }
 }
