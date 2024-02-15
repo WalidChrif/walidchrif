@@ -160,6 +160,19 @@ export class DataService {
         image: '../../assets/images/funtravelslogo.png',
       },
       {
+        title: 'My Portfolio',
+        type: 'website to showcase my work, achievements, skills, and experiences',
+        description:
+          'A website that showcases my work, achievements, skills, and experiences.',
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'Bootstrap',
+            'Angular'],
+            link: 'https://github.com/WalidChrif/ShopShop',
+            image : '../../assets/images/portfolioimg.jpg',
+          },
+      {
         title: 'ShopShop',
         type: ' E-commerce web application for music accessories ',
         description:
@@ -174,20 +187,7 @@ export class DataService {
             'MySql',],
             link: 'https://github.com/WalidChrif/ShopShop',
             image : '../../assets/images/shopshoplogo.png'
-      },
-      {
-        title: 'My Portfolio',
-        type: 'website to showcase my work, achievements, skills, and experiences',
-        description:
-          'A website that showcases my work, achievements, skills, and experiences.',
-          technologies: [
-            'HTML5',
-            'CSS3',
-            'Bootstrap',
-            'Angular'],
-            link: 'https://github.com/WalidChrif/ShopShop',
-            image : '../../assets/images/portfolioimg.jpeg',
-          }
+      }
     ],
   };
 
