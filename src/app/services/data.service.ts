@@ -129,7 +129,7 @@ export class DataService {
       { name: 'Tailwind', percentage: 85 },
       // { name: 'SASS', percentage: 90 },
       // { name: 'Angular Material', percentage: 90 },
-      { name: 'TypeScript', percentage: 95 },
+      // { name: 'TypeScript', percentage: 95 },
       // { name: 'RESTful Webservices', percentage: 90 },
       { name: 'MySQL', percentage: 90 },
       { name: 'SQL Server', percentage: 85 },
@@ -140,7 +140,55 @@ export class DataService {
       // { name: 'Kubernetes', percentage: 90 },
       // { name: 'Jenkins', percentage: 90 },
       // { name: 'SonarQube', percentage: 90 },
-    ]
+    ],
+    projects: [
+      {
+        title: 'FunTravels',
+        type: 'Real Estate and Vacation Management Platform',
+        description:
+          'A platform that allows users to list, search, and book real estate properties and vacation rentals.',
+        technologies: [
+          'HTML5',
+          'CSS3',
+          'Angular Material',
+          'Angular',
+          'SpringBoot',
+          'Hibernate',
+          'MySql',
+        ],
+        link: 'https://github.com/WalidChrif/FunTravels',
+        image: '../../assets/images/funtravelslogo.png',
+      },
+      {
+        title: 'ShopShop',
+        type: ' E-commerce web application for music accessories ',
+        description:
+          'An online store that allows users to browse, search, and purchase music accessories.',
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'Bootstrap',
+            'Angular',
+            'SpringBoot',
+            'Hibernate',
+            'MySql',],
+            link: 'https://github.com/WalidChrif/ShopShop',
+            image : '../../assets/images/shopshoplogo.png'
+      },
+      {
+        title: 'My Portfolio',
+        type: 'website to showcase my work, achievements, skills, and experiences',
+        description:
+          'A website that showcases my work, achievements, skills, and experiences.',
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'Bootstrap',
+            'Angular'],
+            link: 'https://github.com/WalidChrif/ShopShop',
+            image : '../../assets/images/portfolioimg.jpeg',
+          }
+    ],
   };
 
   getPerson(): Person {
@@ -217,5 +265,9 @@ export class DataService {
 
   getOtherSkills() {
     return this.walid.otherSkills;
+  }
+
+  getProjects() {
+    return this.walid.projects;
   }
 }

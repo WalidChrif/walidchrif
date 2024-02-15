@@ -21,4 +21,26 @@ export const routes: Routes = [{
     component: RedirectGuard,
     data: {
       externalUrl: '//www.facebook.com/profile.php?id=100090756348995'
-    }}];
+    }}
+,{
+    path: 'FunTravels',
+    canActivate: [RedirectGuard],
+    component: RedirectGuard,
+    data: {
+      externalUrl: '//www.github.com/WalidChrif/funtravels'
+    }}
+,{
+    path: 'ShopShop',
+    canActivate: [RedirectGuard],
+    component: RedirectGuard,
+    data: {
+      externalUrl: '//www.github.com/WalidChrif/shopshop'
+    }}
+,{
+    path: 'My Portfolio',
+    canActivate: [RedirectGuard],
+    component: RedirectGuard,
+    data: {
+      externalUrl: '//www.github.com/WalidChrif/myportfolio'
+    }}
+  ];

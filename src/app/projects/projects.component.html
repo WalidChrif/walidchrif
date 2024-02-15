@@ -2,71 +2,17 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>Work</h2>
+                <h2>Projects</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-1.jpg);">
+            <div class="col-md-4 text-center col-padding animate-box" 
+            *ngFor="let project of projects">
+                <a [routerLink]="project.title" class="work" 
+                style="background-image: url({{project.image}});">
                     <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Illustration</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-2.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Brading</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-3.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Illustration</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-4.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Design</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-5.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Website</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-6.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Illustration</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-7.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Brading</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 text-center col-padding animate-box">
-                <a href="#" class="work" style="background-image: url(../assets/images/portfolio-8.jpg);">
-                    <div class="desc">
-                        <h3>Project Name</h3>
-                        <span>Illustration</span>
+                        <h3>{{project.title}}</h3>
+                        <span>{{project.type}}</span>
                     </div>
                 </a>
             </div>

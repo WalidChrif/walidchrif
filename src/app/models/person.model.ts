@@ -1,6 +1,7 @@
 import { Education } from './education.model';
 import { Experience } from './experience.model';
 import { Link } from './link.model';
+import { Project } from './project.model';
 import { Service } from './service.model';
 import { Skill } from './skill.model';
 export interface Person {
@@ -18,6 +19,7 @@ export interface Person {
     services? : Service[];
     mainSkills? : Skill[];
     otherSkills? : Skill[];
+    projects? : Project[];
 
 
 }
