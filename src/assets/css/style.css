@@ -1295,8 +1295,8 @@ input[type="text"] {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: #ff9b1a !important;
-  border-color: #ff9b1a !important;
+  background: #4c4a8a !important;
+  border-color: #4c4a8a !important;
 }
 
 .btn-primary.btn-outline {
