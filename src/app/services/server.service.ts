@@ -12,17 +12,17 @@ export class ServerService {
   constructor(private http: HttpClient) { }
 
   sendMail(emailForm: FormGroup) {
-    if (emailForm.valid) {
+    // if (emailForm.valid) {
       const email = emailForm.value;
       console.log('this is the email : ',email);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       this.http.post('https://formspree.io/f/xrgnkpwq',
-        { name: email.name, email: email.email,subject : email.subject , message: email.message },
+        { name: email.name, email: email.email, message: email.message, subject : email.subject },
         { 'headers': headers }).subscribe(
           // (response: any) => {
           //   console.log(response);
           // }
         );
     }
-  }
+  // }
 }
