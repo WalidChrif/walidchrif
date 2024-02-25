@@ -169,8 +169,8 @@ export class DataService {
             'CSS3',
             'Bootstrap',
             'Angular'],
-            link: 'https://github.com/WalidChrif/ShopShop',
-            image : '../../assets/images/portfolioimgcopy.jpg',
+            link: 'https://github.com/WalidChrif/walidchrif',
+            image : './../../assets/images/portfolioimgcopy.jpg',
           },
       {
         title: 'ShopShop',
@@ -186,7 +186,7 @@ export class DataService {
             'Hibernate',
             'MySql',],
             link: 'https://github.com/WalidChrif/ShopShop',
-            image : '../../assets/images/copy.png'
+            image : '../../assets/images/shopshoplogocopy.png'
       }
     ],
   };
