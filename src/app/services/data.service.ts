@@ -157,7 +157,7 @@ export class DataService {
           'MySql',
         ],
         link: 'https://github.com/WalidChrif/FunTravels',
-        image: './../../assets/images/funtravelslogo.png',
+        image: 'https://walidchrif.github.io/walidchrif/blob/master/docs/assets/images/funtravelslogo.png',
       },
       {
         title: 'My Portfolio',
