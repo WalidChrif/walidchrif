@@ -157,7 +157,7 @@ export class DataService {
           'MySql',
         ],
         link: 'https://github.com/WalidChrif/FunTravels',
-        image: '../../assets/images/funtravelslogo.png',
+        image: './../../assets/images/funtravelslogo.png',
       },
       {
         title: 'My Portfolio',
@@ -170,7 +170,7 @@ export class DataService {
             'Bootstrap',
             'Angular'],
             link: 'https://github.com/WalidChrif/walidchrif',
-            image : './../../assets/images/portfolioimgcopy.JPG',
+            image : '/../../assets/images/portfolioimgcopy.JPG',
           },
       {
         title: 'ShopShop',
