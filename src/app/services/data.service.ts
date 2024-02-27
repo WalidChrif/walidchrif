@@ -170,7 +170,7 @@ export class DataService {
             'Bootstrap',
             'Angular'],
             link: 'https://github.com/WalidChrif/walidchrif',
-            image : './assets/images/portfolioimgcopy.jpg',
+            image : './../../assets/images/portfolioimgcopy.JPG',
           },
       {
         title: 'ShopShop',
