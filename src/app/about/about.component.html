@@ -1,0 +1,37 @@
+<div id="fh5co-about" class="animate-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>About Me</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-4">
+                <ul class="info">
+                    <li></li>
+                    <li *ngFor="let info of infos | keyvalue : sortNull">
+                        <div *ngIf="info.value">
+                            <span class="first-block">{{info.key}}:</span>
+                            <span class="second-block">{{info.value}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2>Hello There!</h2>
+                <p>{{walid.profileDescription}}</p>
+                <!-- <p> -->
+                <br>
+                <ul class="fh5co-social-icons">
+                    <li *ngFor="let link of walid.links">
+                        <!-- <a [href]="link.url"> -->
+                         <a   [routerLink]="[link.name.toLocaleLowerCase()]">
+                            <i class="icon-{{service.getSiteIcon(link.name)}}"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- </p> -->
+            </div>
+        </div>
+    </div>
+</div>

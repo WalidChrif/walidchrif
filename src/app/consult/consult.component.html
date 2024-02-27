@@ -1,0 +1,43 @@
+<div id="fh5co-consult">
+    <div class="video fh5co-video" style="background-image: url(../assets/images/cover_bg_4copy.jpg);">
+        <div class="overlay"></div>
+    </div>
+    <div class="choose animate-box">
+        <h2>Contact</h2>
+        <!-- <form (submit)="sendMail(contactForm)" #contactForm="ngForm"> -->
+
+        <form  [formGroup]="emailForm" (submit)="sendMail(emailForm)" >
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <input type="text" id="name" class="form-control" placeholder="Your name"
+                    formControlName="name">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <input type="text" id="email" class="form-control" placeholder="Your email address"
+                    formControlName="email">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <input type="text" id="subject" class="form-control" 
+                    placeholder="subject of this message" formControlName="subject">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"
+                        placeholder="Your message" formControlName="message"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Mail" class="btn btn-primary">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- <div id="map" class="fh5co-map"></div> -->
+<!-- orange ff9b1a primary 1B3B6F  overlay 4c4a8a-->
